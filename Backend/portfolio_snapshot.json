@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "total_mortgages": 45829,
+    "serious_delinquency_cases": 75,
+    "delinquency_rate_percent": 0.164,
+    "average_credit_score": 748.7,
+    "average_dti": 34.1,
+    "average_ltv": 73.3
+  },
+  "credit_score": [
+    {
+      "band": "Below 620",
+      "mortgages": 202,
+      "serious_cases": 2,
+      "delinquency_rate": 0.99
+    },
+    {
+      "band": "620\u2013679",
+      "mortgages": 3803,
+      "serious_cases": 30,
+      "delinquency_rate": 0.789
+    },
+    {
+      "band": "680\u2013739",
+      "mortgages": 13513,
+      "serious_cases": 32,
+      "delinquency_rate": 0.237
+    },
+    {
+      "band": "740\u2013799",
+      "mortgages": 22354,
+      "serious_cases": 9,
+      "delinquency_rate": 0.04
+    },
+    {
+      "band": "800+",
+      "mortgages": 5957,
+      "serious_cases": 2,
+      "delinquency_rate": 0.034
+    }
+  ]
+}

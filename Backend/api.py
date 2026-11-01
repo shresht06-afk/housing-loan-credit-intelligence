@@ -2,6 +2,7 @@ from pathlib import Path
 
 import joblib
 import pandas as pd
+import json
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -84,12 +85,34 @@ from fastapi import Query
 
 DATA_PATH = PROJECT_ROOT / "Data" / "ml_training_dataset_provisional.csv"
 
+SNAPSHOT_PATH = PROJECT_ROOT / "Backend" / "portfolio_snapshot.json"
+
+
+def load_portfolio_snapshot(key):
+    if not SNAPSHOT_PATH.exists():
+        raise HTTPException(
+            status_code=503, detail="Historical portfolio statistics are unavailable."
+        )
+
+    with open(SNAPSHOT_PATH, "r", encoding="utf-8") as file:
+        snapshot = json.load(file)
+
+    if key not in snapshot:
+        raise HTTPException(
+            status_code=503, detail="Requested historical statistics are unavailable."
+        )
+
+    return snapshot[key]
+
 
 @app.get("/analytics/summary")
 def analytics_summary():
-    if not DATA_PATH.exists():
-        raise HTTPException(status_code=404, detail="Mortgage dataset not found")
 
+    # Use saved statistics when the full dataset is unavailable
+    if not DATA_PATH.exists():
+        return load_portfolio_snapshot("summary")
+
+    # Use the original dataset when running locally
     df = pd.read_csv(DATA_PATH)
 
     required = ["Credit Score", "DTI", "LTV", "Target"]
