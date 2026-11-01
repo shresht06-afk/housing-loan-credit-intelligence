@@ -1,0 +1,25 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Next.js
+node_modules/
+.next/
+out/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local datasets
+Data/
+
+# Machine learning artifacts
+Models/*.joblib
+Models/*.pkl
+
+# Logs
+*.log
