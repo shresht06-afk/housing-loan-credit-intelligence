@@ -145,6 +145,11 @@ def analytics_summary():
 
 @app.get("/analytics/credit-score")
 def credit_score_analysis():
+    # Use the saved data when deployed on Render
+    if not DATA_PATH.exists():
+        return load_portfolio_snapshot("credit_score")
+
+    # Use the original dataset when running locally
     df = pd.read_csv(DATA_PATH)
 
     df["Target"] = pd.to_numeric(df["Target"], errors="coerce")
