@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { API_BASE_URL } from "../lib/config";
 
 import {
   BarChart,
@@ -58,11 +59,13 @@ export default function OverviewPage() {
   useEffect(() => {
     async function loadOverview() {
       try {
+
         const [summaryResponse, bandsResponse] =
           await Promise.all([
-            fetch("http://127.0.0.1:8000/analytics/summary"),
-            fetch("http://127.0.0.1:8000/analytics/credit-score"),
+            fetch(`${API_BASE_URL}/analytics/summary`),
+            fetch(`${API_BASE_URL}/analytics/credit-score`),
           ]);
+
 
         if (!summaryResponse.ok || !bandsResponse.ok) {
           throw new Error("Unable to load portfolio information.");

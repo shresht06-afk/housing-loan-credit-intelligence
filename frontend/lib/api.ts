@@ -1,4 +1,7 @@
 
+import { API_BASE_URL } from "./config";
+
+// Mortgage inputs sent to the FastAPI backend
 export type MortgageInput = {
     credit_score: number;
     dti: number;
@@ -7,6 +10,7 @@ export type MortgageInput = {
     loan_amount: number;
 };
 
+// Response received from our ML model
 export type PredictionResult = {
     experimental_risk_score: number;
     risk_score_percent: number;
@@ -14,11 +18,13 @@ export type PredictionResult = {
     disclaimer: string;
 };
 
+// Send mortgage information to the backend
 export async function predictMortgageRisk(
     input: MortgageInput
 ): Promise<PredictionResult> {
+
     const response = await fetch(
-        "http://127.0.0.1:8000/predict",
+        `${API_BASE_URL}/predict`,
         {
             method: "POST",
             headers: {
@@ -30,6 +36,7 @@ export async function predictMortgageRisk(
 
     if (!response.ok) {
         const message = await response.text();
+
         throw new Error(
             `Prediction failed (HTTP ${response.status}): ${message}`
         );

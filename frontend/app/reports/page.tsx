@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { API_BASE_URL } from "../../lib/config";
 
 import {
     FileText,
@@ -65,7 +66,7 @@ export default function ReportsPage() {
         async function loadHistoricalData() {
             try {
                 const response = await fetch(
-                    "http://127.0.0.1:8000/analytics/credit-score"
+                    `${API_BASE_URL}/analytics/credit-score`
                 );
 
                 if (!response.ok) {
