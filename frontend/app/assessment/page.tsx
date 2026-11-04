@@ -218,7 +218,7 @@ export default function AssessmentPage() {
     }
 
     return (
-        <div className="mx-auto max-w-6xl space-y-7 pb-10">
+        <div className="mx-auto min-w-0 max-w-6xl space-y-7 pb-10">
 
             {/* Page heading */}
             <header className="border-b border-[#293B51] pb-6">
@@ -239,7 +239,7 @@ export default function AssessmentPage() {
             {/* Mortgage input form */}
             <section className="border border-[#293B51] bg-[#142238]">
 
-                <div className="border-b border-[#293B51] px-7 py-5">
+                <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                     <h2 className="text-base font-semibold text-[#E8EFF7]">
                         Mortgage Information
                     </h2>
@@ -249,7 +249,7 @@ export default function AssessmentPage() {
                     </p>
                 </div>
 
-                <div className="grid gap-6 p-7 md:grid-cols-2">
+                <div className="grid gap-5 p-4 sm:gap-6 sm:p-7 md:grid-cols-2">
                     {fields.map((field) => (
                         <div key={field.key}>
                             <label
@@ -287,13 +287,13 @@ export default function AssessmentPage() {
             {/* Calculated financial ratios */}
             <section className="border border-[#293B51] bg-[#142238]">
 
-                <div className="border-b border-[#293B51] px-7 py-5">
+                <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                     <h2 className="text-base font-semibold text-[#E8EFF7]">
                         Calculated Financial Ratios
                     </h2>
                 </div>
 
-                <div className="grid gap-6 p-7 sm:grid-cols-2">
+                <div className="grid gap-5 p-4 sm:gap-6 sm:p-7 sm:grid-cols-2">
 
                     <div>
                         <p className="text-xs text-[#91A4BA]">
@@ -329,7 +329,7 @@ export default function AssessmentPage() {
             {/* Assessment controls */}
             <section className="border border-[#293B51] bg-[#142238]">
 
-                <div className="border-b border-[#293B51] px-7 py-5">
+                <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                     <h2 className="text-base font-semibold text-[#E8EFF7]">
                         Credit Risk Evaluation
                     </h2>
@@ -340,7 +340,7 @@ export default function AssessmentPage() {
                     </p>
                 </div>
 
-                <div className="p-7">
+                <div className="p-4 sm:p-7">
 
                     <div className="flex flex-wrap gap-3">
                         <button

@@ -84,7 +84,7 @@ export default function AnalyticsPage() {
     }, []);
 
     return (
-        <div className="mx-auto max-w-6xl space-y-7 pb-10">
+        <div className="mx-auto min-w-0 max-w-6xl space-y-7 pb-10">
 
             {/* PAGE HEADING */}
             <header className="border-b border-[#293B51] pb-6">
@@ -106,7 +106,7 @@ export default function AnalyticsPage() {
             {assessment ? (
                 <section className="border border-[#293B51] bg-[#142238]">
 
-                    <div className="border-b border-[#293B51] px-7 py-5">
+                    <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                         <p className="text-xs uppercase tracking-wider text-[#48C6C0]">
                             Individual Mortgage Analysis
                         </p>
@@ -121,7 +121,7 @@ export default function AnalyticsPage() {
                         </p>
                     </div>
 
-                    <div className="p-7">
+                    <div className="p-4 sm:p-7">
 
                         {/* Individual financial metrics */}
                         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -293,13 +293,13 @@ export default function AnalyticsPage() {
                     {/* HISTORICAL FINANCIAL PROFILE */}
                     <section className="border border-[#293B51] bg-[#142238]">
 
-                        <div className="border-b border-[#293B51] px-7 py-5">
+                        <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                             <h2 className="text-base font-semibold text-[#E8EFF7]">
                                 Portfolio Financial Profile
                             </h2>
                         </div>
 
-                        <div className="grid gap-6 p-7 md:grid-cols-3">
+                        <div className="grid gap-5 p-4 sm:gap-6 sm:p-7 md:grid-cols-3">
                             {[
                                 {
                                     label: "Average Credit Score",
@@ -337,7 +337,7 @@ export default function AnalyticsPage() {
             {bands.length > 0 && (
                 <section className="border border-[#293B51] bg-[#142238]">
 
-                    <div className="border-b border-[#293B51] px-7 py-5">
+                    <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                         <h2 className="text-base font-semibold text-[#E8EFF7]">
                             Delinquency by Credit Score
                         </h2>
@@ -348,7 +348,7 @@ export default function AnalyticsPage() {
                         </p>
                     </div>
 
-                    <div className="overflow-x-auto p-7">
+                    <div className="w-full overflow-x-auto p-4 sm:p-7">
                         <table className="w-full text-left text-sm">
                             <thead>
                                 <tr className="border-b border-[#365068] text-xs text-[#91A4BA]">

@@ -3,7 +3,7 @@ import { Shield } from "lucide-react";
 
 export default function Header() {
     return (
-        <header className="flex h-20 items-center justify-between border-b border-slate-200 bg-white px-8">
+        <header className="hidden h-20 items-center justify-between md:flex border-b border-slate-200 bg-white px-8">
 
             <div>
                 <p className="text-xs font-medium uppercase tracking-widest text-slate-400">

@@ -20,15 +20,15 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-[#F5F7FA] text-slate-900">
 
-        <div className="flex min-h-screen">
+        <div className="flex min-h-screen min-w-0 flex-col md:flex-row">
 
           <Sidebar />
 
-          <div className="flex min-w-0 flex-1 flex-col">
+          <div className="flex min-w-0 w-full flex-1 flex-col">
 
             <Header />
 
-            <main className="flex-1 p-8">
+            <main className="min-w-0 w-full flex-1 px-4 py-5 sm:px-6 sm:py-7 lg:p-8">
               {children}
             </main>
 

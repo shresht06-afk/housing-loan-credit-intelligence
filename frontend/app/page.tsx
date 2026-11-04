@@ -93,7 +93,7 @@ export default function OverviewPage() {
   }));
 
   return (
-    <div className="mx-auto max-w-6xl space-y-8 pb-12">
+    <div className="mx-auto min-w-0 max-w-6xl space-y-8 pb-12">
 
       {/* PAGE HEADING */}
       <header className="border-b border-[#293B51] pb-6">
@@ -191,7 +191,7 @@ export default function OverviewPage() {
 
       {/* RISK DISTRIBUTION CHART */}
       <section className="border border-[#293B51] bg-[#142238]">
-        <div className="border-b border-[#293B51] px-7 py-5">
+        <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
           <h2 className="text-base font-semibold text-[#E8EFF7]">
             Credit Risk Distribution
           </h2>
@@ -203,7 +203,7 @@ export default function OverviewPage() {
 
         {bands.length > 0 ? (
           <div className="h-80 p-6">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="100%" minWidth={0}>
               <BarChart
                 data={chartData}
                 margin={{ top: 15, right: 15, left: 0, bottom: 5 }}

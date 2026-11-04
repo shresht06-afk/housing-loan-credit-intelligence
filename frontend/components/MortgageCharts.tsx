@@ -73,12 +73,12 @@ export default function MortgageCharts({
     }));
 
     const panel =
-        "border border-[#293B51] bg-[#142238]";
+        "min-w-0 border border-[#293B51] bg-[#142238]";
 
     return (
         <div className="space-y-6">
 
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid min-w-0 gap-4 lg:grid-cols-2 lg:gap-6">
 
                 {/* CREDIT SCORE COMPARISON */}
                 <section className={panel}>
@@ -92,8 +92,8 @@ export default function MortgageCharts({
                         </p>
                     </div>
 
-                    <div className="h-72 p-5">
-                        <ResponsiveContainer width="100%" height="100%">
+                    <div className="h-64 min-w-0 p-3 sm:h-72 sm:p-5">
+                        <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                             <BarChart
                                 data={creditData}
                                 margin={{ top: 15, right: 10, left: 0, bottom: 5 }}
@@ -150,8 +150,8 @@ export default function MortgageCharts({
                         </p>
                     </div>
 
-                    <div className="h-72 p-5">
-                        <ResponsiveContainer width="100%" height="100%">
+                    <div className="h-64 min-w-0 p-3 sm:h-72 sm:p-5">
+                        <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                             <BarChart
                                 data={ratioData}
                                 margin={{ top: 15, right: 10, left: 0, bottom: 5 }}
@@ -208,8 +208,8 @@ export default function MortgageCharts({
                     </p>
                 </div>
 
-                <div className="h-80 p-5">
-                    <ResponsiveContainer width="100%" height="100%">
+                <div className="h-64 min-w-0 p-3 sm:h-80 sm:p-5">
+                    <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                         <BarChart
                             data={delinquencyData}
                             margin={{ top: 15, right: 10, left: 0, bottom: 5 }}

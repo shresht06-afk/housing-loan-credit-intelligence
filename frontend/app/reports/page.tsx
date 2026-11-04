@@ -105,7 +105,7 @@ export default function ReportsPage() {
     // Display this when no assessment has been completed
     if (!assessment) {
         return (
-            <div className="mx-auto max-w-5xl space-y-7 pb-12">
+            <div className="mx-auto min-w-0 max-w-5xl space-y-7 pb-12">
 
                 <header className="border-b border-[#293B51] pb-6">
                     <p className="text-xs uppercase tracking-wider text-[#48C6C0]">
@@ -220,7 +220,7 @@ export default function ReportsPage() {
     return (
         <div
             id="mortgage-report"
-            className="mx-auto max-w-6xl space-y-7 pb-12 print:max-w-none print:space-y-5"
+            className="mx-auto min-w-0 max-w-6xl space-y-7 pb-12 print:max-w-none print:space-y-5"
         >
 
             {/* REPORT HEADER */}
@@ -275,7 +275,7 @@ export default function ReportsPage() {
 
             <section className="border border-[#293B51] bg-[#142238]">
 
-                <div className="border-b border-[#293B51] px-7 py-5">
+                <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                     <p className="text-xs uppercase tracking-wider text-[#48C6C0]">
                         01 / Executive Summary
                     </p>
@@ -285,7 +285,7 @@ export default function ReportsPage() {
                     </h2>
                 </div>
 
-                <div className="space-y-6 p-7">
+                <div className="space-y-6 p-4 sm:p-7">
 
                     <div className="grid gap-4 sm:grid-cols-3">
 
@@ -351,7 +351,7 @@ export default function ReportsPage() {
 
             <section className="border border-[#293B51] bg-[#142238]">
 
-                <div className="border-b border-[#293B51] px-7 py-5">
+                <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                     <p className="text-xs uppercase tracking-wider text-[#48C6C0]">
                         02 / Financial Profile
                     </p>
@@ -426,7 +426,7 @@ export default function ReportsPage() {
 
             <section className="border border-[#293B51] bg-[#142238]">
 
-                <div className="border-b border-[#293B51] px-7 py-5">
+                <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                     <p className="text-xs uppercase tracking-wider text-[#48C6C0]">
                         03 / Financial Interpretation
                     </p>
@@ -436,7 +436,7 @@ export default function ReportsPage() {
                     </h2>
                 </div>
 
-                <div className="grid gap-6 p-7 lg:grid-cols-2">
+                <div className="grid gap-5 p-4 sm:gap-6 sm:p-7 lg:grid-cols-2">
 
                     {/* DTI */}
 
@@ -501,7 +501,7 @@ export default function ReportsPage() {
 
             <section className="border border-[#293B51] bg-[#142238]">
 
-                <div className="border-b border-[#293B51] px-7 py-5">
+                <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                     <p className="text-xs uppercase tracking-wider text-[#48C6C0]">
                         04 / Historical Comparison
                     </p>
@@ -511,7 +511,7 @@ export default function ReportsPage() {
                     </h2>
                 </div>
 
-                <div className="space-y-5 p-7">
+                <div className="space-y-5 p-4 sm:p-7">
 
                     <p className="text-sm leading-7 text-[#C5D2DF]">
                         The mortgage falls within the{" "}
@@ -579,7 +579,7 @@ export default function ReportsPage() {
 
             <section className="border border-[#293B51] bg-[#142238]">
 
-                <div className="border-b border-[#293B51] px-7 py-5">
+                <div className="border-b border-[#293B51] px-4 py-4 sm:px-7 sm:py-5">
                     <p className="text-xs uppercase tracking-wider text-[#48C6C0]">
                         05 / Model Assessment
                     </p>
@@ -589,7 +589,7 @@ export default function ReportsPage() {
                     </h2>
                 </div>
 
-                <div className="space-y-6 p-7">
+                <div className="space-y-6 p-4 sm:p-7">
 
                     <div className="border border-[#365068] bg-[#101C2D] p-6">
 
